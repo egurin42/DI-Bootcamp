@@ -1,0 +1,35 @@
+/*Selector{
+	Property: value;
+}*/
+
+body{
+	background-image: url(https://static.vecteezy.com/system/resources/previews/000/378/561/non_2x/vector-simple-geometric-pastel-background.jpg);
+	background-size: cover;
+}
+h2 , p {
+	color: #AA4139;
+	text-align: center;
+	border: 5px double #FFB0AA;
+	cursor: default;
+}
+
+p:hover{
+	color: green;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+.webtext {
+	border: 5px dashed green;
+}
+
+#div1{
+	background: rgba(0, 0, 255, .2);
+}
+
+#div2{
+	background: rgba(255, 0, 0, .2);
+}
