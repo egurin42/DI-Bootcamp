@@ -1,6 +1,28 @@
 body{
-    background-image: url('dc-marvel.jpg');
+    background-image: url('flash.jpg');
     background-size: cover;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 250px;
+    background: -webkit-linear-gradient(red,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate__animated.animate__lightSpeedInRight{
+    --animate-duration: 1.5s;
+}
+
+p{
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid grey;
+    padding: 10px;
+    text-align: center;
+    margin: 50px 300px 50px 300px;
+    margin-top: 150px;
 }
 
 nav{
