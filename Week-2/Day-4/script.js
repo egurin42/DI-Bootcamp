@@ -1,30 +1,30 @@
-// function hello(name){
-//     console.log(`Hello ${name}`);
-// }
+function hello(name){
+    console.log(`Hello ${name}`);
+}
 
-// function ages(myAge) {
-//     let ageMom = 2 * myAge;
-//     console.log(ageMom);
-//     return ageMom;
-// }
+function ages(myAge) {
+    let ageMom = 2 * myAge;
+    console.log(ageMom);
+    return ageMom;
+}
 
-// let ageMultiple = ages(19);
-// console.log(ageMultiple*2);
+let ageMultiple = ages(19);
+console.log(ageMultiple*2);
 
-// function name1() {
-//     let name = prompt("Please enter your first name:");
-//     return name;
-// }
+function name1() {
+    let name = prompt("Please enter your first name:");
+    return name;
+}
 
-// function name2(){
-//     let name = prompt("Please enter your middle name: If you do not have a middle name, enter no middle name");
-//     return name;
-// }
+function name2(){
+    let name = prompt("Please enter your middle name: If you do not have a middle name, enter no middle name");
+    return name;
+}
 
-// function name3() {
-//     let name = prompt("Please enter your last name:");
-//     return name;
-// }
+function name3() {
+    let name = prompt("Please enter your last name:");
+    return name;
+}
 
 // let firstName = name1();
 // let middleName = name2();
@@ -182,4 +182,160 @@ function WordsInFrame(){
     }
     
     console.log(tbstar);
+}
+
+// Daily Challenge: 99 Bottles of Beer
+function BeerSong(){
+    let bottles = parseInt(prompt("Input a starting number of bottles of beer"))
+    let count = 1;
+    console.log(`${bottles} bottles of beer on the wall`);
+    console.log(`${bottles} bottles of beer`);
+    console.log(`Take ${count} down, pass it around`);
+
+    for (i = bottles - 1; i > 0; i -= count){
+        count++;
+        let bottlesLeft = i - count;
+        console.log(`${i} bottles of beer on the wall`);
+        console.log(`${i} bottles of beer on the wall`);
+        console.log(`Take ${count} down, pass it around`);
+
+        if (bottlesLeft > 0){
+            console.log(`${bottlesLeft} bottles of beer on the wall`);
+        }
+        else{
+            console.log(`No more bottles of beer on the wall!`);
+        }
+    }
+
+}
+
+// Hangman
+function Hangman(){
+    let word = "";
+    let secret = "";
+    while(true){
+        word = prompt("Player 1, enter ONE word at least 8 letters long:")
+        if (!word.includes(" ")){
+            break
+        }
+        else{
+            alert("Error!! Word is too short or multiple words");
+        }
+    }
+
+        word = word.toLowerCase();
+        for (i = 0; i < word.length; i++){
+            secret += "*";
+        }
+        console.log(secret);
+        alert("Player 2, start guessing letters");
+
+        let guess = "";
+        let lettersGuessedCorrect = 0;
+        let lettersGuessed = "";
+        let tries = 0;
+
+        game:
+        while (lettersGuessedCorrect <= secret.length){
+            guess = prompt(`Progress: ${secret}\nGuess any letter!`);
+            guess = guess.toLowerCase();
+            console.log(guess);
+
+            if (word.includes(guess) && !lettersGuessed.includes(guess)){
+                for (i = 0; i < word.length; i++){
+                    if (word.charAt(i) === guess){
+                        secret = setCharAt(secret,i,guess);
+                        lettersGuessedCorrect++;
+                        alert(`Great guess!!\nProgress: ${secret}`);
+                        if (secret === word){
+                            alert("You won!");
+                            break game;
+                        }
+                    }
+                }
+                lettersGuessed += `${guess} `;
+                console.log(lettersGuessed);
+            }
+
+            else if (lettersGuessed.includes(guess)){
+                alert("You've already guessed this. Guess again!");
+            }
+            
+            else if(!word.includes(guess) && !lettersGuessed.includes(guess)){
+                lettersGuessed += `${guess} `;
+                console.log(lettersGuessed);
+                alert("Wrong. Letter not in word");
+                tries++;
+                alert(`You have ${10 - tries} incorrect guesses left`);
+                console.log(`You have ${10 - tries} incorrect guesses left`);
+                if (tries == 10){
+                    alert(`You lost:( The word was ${word}`)
+                    break game;
+                }
+            }
+        }
+}
+// Part of Hangman
+    function setCharAt(str,index,chr) {
+        if(index > str.length-1) return str;
+        return str.substring(0,index) + chr + str.substring(index+1);
+    }
+
+
+// Calculator
+let selectedValues = [];
+let selectedOperators = [];
+let sum = 0;
+let finalValues = [];
+
+function number(num){
+    selectedValues.push(num);
+    console.log(`Values Selected: ${selectedValues}`);
+}
+function operator(op){
+    let current = parseInt(selectedValues.join(""));
+    finalValues.push(current);
+    selectedValues = [];
+    console.log(finalValues);
+    selectedOperators.push(op);
+    console.log(`Operators Selected: ${selectedOperators}`);
+}
+
+function equal(eq){
+    let current = parseInt(selectedValues.join(""));
+    finalValues.push(current);
+    selectedValues = [];
+
+    if (selectedOperators[0] == "+"){
+        sum = finalValues[0] + finalValues[1];
+    }
+    else if (selectedOperators[0] == "-"){
+        sum = finalValues[0] - finalValues[1];
+    }
+    else if (selectedOperators[0] == "/"){
+        sum = finalValues[0] / finalValues[1];
+    }
+    else if (selectedOperators[0] == "*"){
+        sum = finalValues[0] * finalValues[1];
+    }
+    
+    for (i = 1; i < finalValues.length; i++){
+        for (j = 1; i < selectedOperators.length; i++){
+            if (selectedOperators[j] == "+"){
+                sum += finalValues[i+1];
+            }
+            else if (selectedOperators[j] == "-"){
+                sum -= finalValues[i+1];
+            }
+            else if (selectedOperators[j] == "/"){
+                sum /= finalValues[i+1];
+            }
+            else if (selectedOperators[j] == "*"){
+                sum *= finalValues[i+1];
+            }
+        }
+    }
+    console.log(`Total: ${sum}`);
+    console.log(`Values: ${finalValues}`);
+    console.log(`Operators: ${selectedOperators}`);
 }
