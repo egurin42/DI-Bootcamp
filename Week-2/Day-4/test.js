@@ -1,42 +1,23 @@
-let currentNum = "";
-let OGNum = 0;
-let oppa = "";
-let finalNum = 0;
-
-function number(num){
-    currentNum += `${num}`;
-    console.log(currentNum);
+let previousNumber = []
+let prev = ''
+let math = ''
+function number(num) {
+    previousNumber.push(num)
 }
-
 function operator(op){
-    parseInt(currentNum);
-    OGNum = currentNum;
-    curentNum = "";
-    oppa = op;
-    console.log(`currentNum: ${currentNum}`);
-    console.log(`OGNum: ${OGNum}`);
+    math = operator
+    prev = parseInt(previousNumber.join(''))
+    previousNumber = []
+    console.log(prev);
 }
-
-function equal(){
-    currentNum = parseInt(currentNum);
-    OGNum = parseInt(OGNum);
-
-    console.log(OGNum);
-
-    if (oppa == "+"){
-        finalNum = OGNum + currentNum;
+function equal(eq) {
+    if (math === '+') {
+        console.log(prev+parseInt(previousNumber.join('')))
+    } else if (math === '-') {
+        console.log(prev-parseInt(previousNumber.join('')))
+    }  else if (math === '*') {
+        console.log(prev*parseInt(previousNumber.join('')))
+    } else if (math === '/') {
+        console.log(prev/parseInt(previousNumber.join('')))
     }
-    else if (oppa == "-"){
-        finalNum = OGNum - currentNum;
-    }
-    else if (oppa == "/"){
-        if (currentNum != 0 || OGNum != 0){
-            finalNum = OGNum / currentNum;
-        }
-    }
-    else if (oppa == "*"){
-        finalNum = OGNum * currentNum;
-    }
-    console.log(finalNum);
-    currentNum = finalNum;
 }
