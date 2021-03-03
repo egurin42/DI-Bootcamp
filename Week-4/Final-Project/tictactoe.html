@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Links CSS and HTML -->
+    <link rel="stylesheet" href="tictactoe.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body id="home" class="blue darken-4">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="blue darken-1">
+            <div class="container">
+                <div class="nav wrapper">
+                   <a href="tictactoe.html" class="logo brand-logo"><img src="https://ialwaysbecoding.gitbooks.io/tic-tac-toe/content/ttt.gif" width="185px"></a>
+                   <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                       <i class="material-icons">menu</i>
+                   </a>
+                   <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Home</a>
+                        </li>
+                        <li>
+                            <a href="snake.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Snake</a>
+                        </li>
+                        <li>
+                            <a href="tictactoe.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive" >Tic Tac Toe</a>
+                        </li>
+                        <li>
+                            <a href="tetris.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Tetris</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="snake.html">Snake</a>
+        </li>
+        <li>
+            <a href="tictactoe.html">Tic Tac Toe</a>
+        </li>
+        <li>
+            <a href="tetris.html">Tetris</a>
+        </li>
+    </ul>
+    <div class="tic">
+        <div class="container1">
+            
+            <div class="statusAction">
+                <div class="status">x is next</div>
+                <div class="reset">Reset</div>
+            </div>
+            <div class="gameGrid">
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+                <div class="gameCell"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize.css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- This Links JS and HTML -->
+    <script src="script.js" charset="utf-8"></script>
+    <script src="tictactoe.js" charset="utf-8"></script>
+</body>
+</html>

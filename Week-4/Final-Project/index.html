@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Links CSS and HTML -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Final Project</title>
+</head>
+<body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="blue darken-1">
+            <div class="container">
+                <div class="nav wrapper">
+                   <a href="index.html" class="logo brand-logo" style="font-family: 'Press Start 2P', cursive">Gaming Galore</a>
+                   <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                       <i class="material-icons">menu</i>
+                   </a>
+                   <ul class="right hide-on-med-and-down">
+                       <li>
+                           <a href="index.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Home</a>
+                       </li>
+                       <li>
+                           <a href="snake.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Snake</a>
+                       </li>
+                       <li>
+                            <a href="tictactoe.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive" >Tic Tac Toe</a>
+                        </li>
+                       <li>
+                           <a href="tetris.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Tetris</a>
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="snake.html">Snake</a>
+        </li>
+        <li>
+            <a href="tictactoe.html">Tic Tac Toe</a>
+        </li>
+        <li>
+            <a href="tetris.html">Tetris</a>
+        </li>
+    </ul>
+
+    <!-- Section: Slider -->
+    <section class="slider">
+        <ul class="slides">
+            <li>
+              <img src="snakeSlider.png">
+              <div class="caption center-align">
+              </div>
+            </li>
+            <li>
+                <img src="ticSlider.png">
+                <div class="caption center-align">
+                </div>
+              </li>
+            <li>
+              <img src="tetrisSlider.jpg">
+              <div class="caption center-align" style="padding: 250px;">
+                  <h4>Coming Soon!</h4>
+              </div>
+            </li>
+          </ul>
+    </section>
+
+    <!-- Section: Icon Boxes -->
+    <section class="section section-icons blue darken-1 center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <img src="snakeIcon.png" height="90px" width="100px">
+                        <h4>Snake</h4>
+                        <p>Play the classic mobile Snake game online. Eat the food but don't hit the walls or your own tail!</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <img src="ticIcon.png" height="90px" width="90px">
+                        <h4>Tic Tac Toe</h4>
+                        <p>Challenge your friends to a classic game of Tic Tac Toe and see who has the better mind!</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <img src="tetrisIcon.png" height="90px" width="90px">
+                        <h4>Tetris</h4>
+                        <p>Rotate and move the Tetriminos into lines to clear them. The more lines you clear the harder it gets!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Materialize.css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- This Links JS and HTML -->
+    <script src="script.js" charset="utf-8"></script>
+</body>
+</html>

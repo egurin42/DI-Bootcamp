@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Links CSS and HTML -->
+    <link rel="stylesheet" href="snake.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Snake</title>
+</head>
+<body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="blue darken-1">
+            <div class="container1">
+                <div class="nav wrapper">
+                    <a href="snake.html" class="logo brand-logo"><img src="snake.png" width="155px"></a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Home</a>
+                        </li>
+                        <li>
+                            <a href="snake.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Snake</a>
+                        </li>
+                        <li>
+                            <a href="tictactoe.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive" >Tic Tac Toe</a>
+                        </li>
+                        <li>
+                            <a href="tetris.html" style="font-size: smaller; font-family: 'Press Start 2P', cursive">Tetris</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="snake.html">Snake</a>
+        </li>
+        <li>
+            <a href="tictactoe.html">Tic Tac Toe</a>
+        </li>
+        <li>
+            <a href="tetris.html">Tetris</a>
+        </li>
+    </ul>
+    
+    <div class="snake">
+        <div id="papabear">
+            <div class="scoreBox" id="scoreId">Score: 0</div>
+    
+            <div class="container" id="container">
+                <div id="button1"><button class="button button1">Play Game</button></div>
+            </div>
+        </div>
+            <audio id="sounds">
+            <!-- <source src="snakeSound.mp3" type="audio/mpeg"> -->
+            </audio>
+            <audio id="soundsover">
+            <!-- <source src="gameOverSound.mp3" type="audio/mpeg"> -->
+            </audio>
+    </div>
+
+    <!-- Materialize.css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- This Links JS and HTML -->
+    <script src="snake.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
